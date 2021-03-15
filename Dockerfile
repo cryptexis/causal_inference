@@ -1,3 +1,8 @@
-FROM jupyter/datascience-notebook
+ARG BASE_CONTAINER=jupyter/datascience-notebook:latest
+FROM $BASE_CONTAINER
 
-RUN pip install --upgrade sns && conda install mkl-service
+USER root
+RUN apt-get update && apt-get install -y graphviz
+
+USER $NB_UID
+RUN pip install --upgrade sns graphviz && conda install mkl-service

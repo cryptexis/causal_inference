@@ -14,7 +14,7 @@ Reproduces the content of the
 
 ```bash
 cd project_root_dir
-./run_notebook.sh
+./run_docker.sh
 ```
 
 ##### Run in local environment
