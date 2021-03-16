@@ -3,7 +3,7 @@ from graphviz import Digraph
 
 def create_graph(scm, shade_nodes=()):
 
-    dot = Digraph(comment=scm.name)
+    dot = Digraph(comment=scm.name, format='png')
 
     for eq in scm.equations:
         if eq["output_variable"].name in shade_nodes:
